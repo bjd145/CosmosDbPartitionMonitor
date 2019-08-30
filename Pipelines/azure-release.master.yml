@@ -1,0 +1,53 @@
+#
+#Place Holder Template
+# 
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+variables:
+  AzureSubscrptionConnection: ''
+  ResourceGroupName: 'DevSub01_MongoPartitionMonitor_RG'
+  location: 'Central US'
+  functionAppName: ''
+  cosmosDBAccountName: ''
+  cosmosDBKey: ''
+  cosmosDBDatabase: ''
+  cosmosDBCollection: ''
+  logicAppUri: ''
+
+steps:
+- task: DownloadPipelineArtifact@2
+  displayName: 'Download Pipeline Artifacts'
+  inputs:
+    buildType: 'current'
+    targetPath: '$(System.ArtifactsDirectory)/'
+
+#- task: AzureResourceGroupDeployment@2
+#  displayName: 'Azure Resource Group Deployment - Logic App'
+#  inputs:
+#    azureSubscription: '$(AzureSubscrptionConnection)'
+#    resourceGroupName: '$(ResourceGroupName)'
+#    location: '$(location)'
+#    csmFile: '$(System.ArtifactsDirectory)/drop/LogicApp/LogicApp.json'
+#    csmParametersFile: '$(System.ArtifactsDirectory)/drop/LogicApp/logicapp.parameters.uat.json'
+
+#- powershell: |
+#    $result = ConvertFrom-Json $ENV:deploymentOutput
+#    $logicAppUri = $result.logicAppUri.value
+#    Write-Host "##vso[task.setvariable variable=logicAppUri]$logicAppUri"
+#  displayName: 'PowerShell Script - Parse Output'
+
+#- task: AzureCLI@1
+#  displayName: 'Azure CLI Script'
+#  inputs:
+#    azureSubscription: '$(AzureSubscrptionConnection)'
+#    scriptPath: '$(System.DefaultWorkingDirectory)/drop/Infrastructure/create_infrastructure.sh'
+#    arguments: '$(ResourceGroupName) $(location) $(functionAppName) $(cosmosDBAccountName) $(cosmosDBKey) $(cosmosDBDatabase) $(cosmosDBCollection) $(logicAppUri) '
+
+#- task: AzureFunctionApp@1
+#  displayName: 'Azure Function Deploy'
+#  inputs:
+#    azureSubscription: '$(AzureSubscrptionConnection)'
+#    appType: functionApp
+#    appName: '$(functionHostName)'
