@@ -16,3 +16,4 @@ TBD
 - [ ] Logic App to send Alert to MS Teams
 - [ ] Funtion App that runs on schedule to query a Database/Collection and send alert to Logic App
 - [ ] Expand to multiple database/collections 
+- [ ] Alert suppression 
