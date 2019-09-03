@@ -1,20 +1,18 @@
-# Introduction 
-TODO: Give a short introduction of your project. Let this section explain the objectives or the motivation behind this project. 
+# Overview 
+This repository is to demostrate how to use the Cosmos SDK to get storage statistics for a database/collection
 
 # Getting Started
-TODO: Guide users through getting your code up and running on their own system. In this section you can talk about:
-1.	Installation process
-2.	Software dependencies
-3.	Latest releases
-4.	API references
+## Console App
+1. git clone https://github.com/bjd145/CosmosDbPartitionMonitor.git
+2. cd ConsoleApp
+3. dotnet restore
+4. dotnet build 
+5. dotnet run --account (https://docdb.documents.azure.com) --masterKey (DocumentDB master key) --database (DocumentDB database ID) --collection (DocumentDB collection ID)
 
-# Build and Test
-TODO: Describe and show how to build your code and run the tests. 
+## Monitor
+TBD
 
-# Contribute
-TODO: Explain how other users and developers can contribute to make your code better. 
-
-If you want to learn more about creating good readme files then refer the following [guidelines](https://docs.microsoft.com/en-us/azure/devops/repos/git/create-a-readme?view=azure-devops). You can also seek inspiration from the below readme files:
-- [ASP.NET Core](https://github.com/aspnet/Home)
-- [Visual Studio Code](https://github.com/Microsoft/vscode)
-- [Chakra Core](https://github.com/Microsoft/ChakraCore)
+## To Do
+- [ ] Logic App to send Alert to MS Teams
+- [ ] Funtion App that runs on schedule to query a Database/Collection and send alert to Logic App
+- [ ] Expand to multiple database/collections 
