@@ -51,7 +51,7 @@ namespace partition_stats
                     foreach(var partitionKeyStatistics in partitionKeyRangeStatistics.PartitionKeyStatistics)
                     {
                         Console.WriteLine("Partition Key {0}", partitionKeyStatistics.PartitionKey);
-                        Console.WriteLine("Partition Key Size (MB) - {0}", Math.Round(Convert.ToDouble(partitionKeyStatistics.SizeInKB),2));
+                        Console.WriteLine("Partition Key Size (MB) - {0}", Math.Round(Convert.ToDouble(partitionKeyStatistics.SizeInKB)/1024,2));
                     }
                 }
 
