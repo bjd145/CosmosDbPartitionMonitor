@@ -3,7 +3,7 @@ This repository is to demostrate how to use the Cosmos SDK to get storage statis
 
 # Getting Started
 ## Console App
-1. git clone https://github.com/bjd145/CosmosDbPartitionMonitor.git
+1. git clone https://github.com/briandenicola/cosmosdb-partition-monitor
 2. cd ConsoleApp
 3. dotnet restore
 4. dotnet build 
